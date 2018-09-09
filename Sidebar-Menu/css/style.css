@@ -1,0 +1,95 @@
+.sidebar{
+    position: fixed;
+    width: 225px;
+    height: 100%;
+    background: #111;
+    z-index: 2;
+    transform: translate(-300px);
+    transition: all .7s linear;
+}
+.sidebar.open{
+    transform: translate(0px);
+    transition: all .7s linear;
+}
+.close_btn{
+    position: absolute;
+    top: 5px;
+    font-size: 28px;
+    right: 19px;
+    color: #818181;
+    transition: .4s all linear;
+}
+.close_btn:hover{
+    color:#dbd3d3;
+}
+
+.sidebar .menu{
+    list-style: none;
+    padding: 60px 0px;
+}
+.sidebar .menu li{
+   position: relative;
+}
+.sidebar .menu li.dropdown a::after{
+    content: '\f107';
+    margin-left: 5px;
+    font-family: FontAwesome;
+}
+
+.sidebar .menu li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    background-color: #1c1c1c;
+    width: 3px;
+    height: 100%;
+    z-index: -1;
+    transition:width .2s ease-in;
+}
+.sidebar .menu li:hover::before{
+    width: 100%;
+    transition:width .2s ease-in;
+}
+.sidebar .menu li:hover{
+    cursor: pointer;
+}
+.sidebar .menu li:hover a{
+    cursor: pointer;
+    color:#fff;
+}
+.sidebar .menu li a{
+    display: inline-block;
+    padding: 7px 30px;
+    color: #818181;
+    font-size: 19px;
+    text-decoration: none;
+}
+.sidebar .menu li:nth-child(1)::before{
+    background-color:#ec1b5a;
+}
+.sidebar .menu li:nth-child(2)::before{
+    background-color:#79aefe;
+}
+.sidebar .menu li:nth-child(3)::before{
+    background-color:#314190;
+}
+.sidebar .menu li:nth-child(4)::before{
+    background-color:#279636;
+}
+.sidebar .menu li:nth-child(5)::before{
+    background-color:#7d5d81;
+}
+.sidebar .menu li:nth-child(6)::before{
+    background-color:#ead24c;
+}
+.main{
+    transition: all .7s linear;
+}
+.main.open{
+    transform: translate(300px);
+    transition: all .7s linear;
+}
+.main .overlay{
+    background:#818181;
+}

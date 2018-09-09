@@ -1,0 +1,58 @@
+/* .fa-times,.fa-check{
+    font-size: 20px;
+    transition: .3s linear;
+}
+.fa-times:hover,.fa-check:hover{
+    cursor: pointer;
+    color:rgb(187, 181, 181);
+} */
+
+*{
+    box-sizing: border-box;
+}
+
+.btnAcc{
+    width: 100%;
+    font-size: 15px;
+    text-align: left;
+    padding: 18px;
+    border: none;
+    outline: none;
+    transition: .4s all linear;
+
+}
+.btnAcc:focus{
+    outline: none;
+}
+.btnAcc:hover{
+    cursor: pointer;
+    background: #ccc;
+}
+.btnAcc::after{
+    content: '\f067';
+    color:rgb(104, 95, 95);
+    float: right;
+    font-family: FontAwesome;
+}
+.active::after{
+    content: '\f068';
+}
+.btnAcc.active{
+    background: rgb(175, 182, 184);
+}
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.text{
+    padding: 0px 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height  .4s ease-out;
+}
+.text p{
+    margin-top: 10px;
+}
+
+
