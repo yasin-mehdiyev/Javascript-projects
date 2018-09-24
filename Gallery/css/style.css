@@ -1,0 +1,48 @@
+.container{
+    width: 970px;
+    margin: 0 auto;
+}
+.gallery{
+   width: 500px;
+   position: relative;
+   background-color: #000;
+   border-radius: 3px;
+   margin: 25px auto;
+   box-shadow: 0px 3px 8px rgba(0, 0, 0, .75);
+   height: 333px;
+}
+.gallery .gallery-item{
+   position: absolute;
+   top:0;
+   left: 0;
+   opacity: 0;
+}
+.gallery .gallery-item:first-child{
+    opacity: 1;
+}
+.gallery .gallery-item.active{
+    opacity: 1!important;
+    transition: opacity .3s ease;
+}
+.gallery .gallery-item img{
+   width: 100%;
+}
+.gallery .gallery-thumbnails{
+    position: absolute;
+   display: flex;
+   justify-content: space-around;
+   background-color: rgba(0,0,0,.6);
+   padding: 6px 0px;
+   font-size: 0px;
+   bottom: 0;
+}
+.gallery .gallery-thumbnails a{
+    width: 17%;
+    border: 2px solid transparent;
+}
+.gallery .gallery-thumbnails a.border{
+    border: 2px solid rgba(32,255,192,.8)!important;
+}
+.gallery .gallery-thumbnails a img{
+    width: 100%;
+}
